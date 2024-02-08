@@ -4,6 +4,7 @@ export default {
   theme: {
     screens: {
       md: '768px', // tablet design
+      lg: '1440px', // desktop design
     },
     extend: {
       fontSize: {
