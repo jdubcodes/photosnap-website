@@ -51,6 +51,7 @@ export default function Home() {
       <section>
         {storyCards.map((card) => (
           <div
+            key={card.key}
             className='h-story-img px-8 py-10 flex flex-col text-white'
             style={{
               background: `linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.66)), url(${card.srcMobile})`,
@@ -71,7 +72,7 @@ export default function Home() {
       </section>
       <section className=' px-9 py-20 flex flex-col gap-14 '>
         {featureCards.map((card) => (
-          <div className='text-center'>
+          <div key={card.key} className='text-center'>
             <img src={card.src} alt={card.heading} className='mx-auto mb-12' />
             <h3 className='mb-4 text-card-heading font-bold'>{card.heading}</h3>
             <p className='text-body'>{card.body}</p>
