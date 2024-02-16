@@ -10,7 +10,8 @@ export default {
       height: {
         'hero-mobile': '18.375rem',
         'hero-tablet': '40.625rem',
-        'card-img': '17rem',
+        'card-img-mobile': '17rem',
+        'card-img-tablet': '37.5rem',
         'story-img': '23.438rem',
       },
       padding: {
@@ -18,6 +19,7 @@ export default {
       },
       gridTemplateColumns: {
         'home-tablet': '1.91fr 1.09fr',
+        'home-tablet-reverse': '1.09fr 1.91fr',
         'home-desktop': '1.25fr 1.75fr',
       },
       colors: {
