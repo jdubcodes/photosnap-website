@@ -8,15 +8,17 @@ export default {
     },
     extend: {
       height: {
-        'hero-img': '18.375rem',
+        'hero-mobile': '18.375rem',
+        'hero-tablet': '40.625rem',
         'card-img': '17rem',
         'story-img': '23.438rem',
       },
       padding: {
         19: '4.5rem',
       },
-      backgroundImage: {
-        '18-days-voyage': 'url("src/assets/stories/mobile/18-days-voyage.jpg")',
+      gridTemplateColumns: {
+        'home-tablet': '1.91fr 1.09fr',
+        'home-desktop': '1.25fr 1.75fr',
       },
       colors: {
         grey: '#DFDFDF',
@@ -28,11 +30,19 @@ export default {
             letterSpacing: '0.125rem',
           },
         ],
-        heading: [
+        'heading-mobile': [
           '2rem',
           {
             letterSpacing: '0.208rem',
             lineHeight: '2.5rem',
+            fontWeight: 700,
+          },
+        ],
+        'heading-tablet': [
+          '2.5rem',
+          {
+            letterSpacing: '0.261rem',
+            lineHeight: '3rem',
             fontWeight: 700,
           },
         ],
