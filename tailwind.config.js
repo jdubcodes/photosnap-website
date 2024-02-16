@@ -21,6 +21,7 @@ export default {
         'home-tablet': '1.91fr 1.09fr',
         'home-tablet-reverse': '1.09fr 1.91fr',
         'home-desktop': '1.25fr 1.75fr',
+        'home-desktop-reverse': '1.75fr 1.25fr',
       },
       colors: {
         grey: '#DFDFDF',
