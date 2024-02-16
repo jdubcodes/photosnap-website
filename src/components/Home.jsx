@@ -9,7 +9,7 @@ import heroDesktop from '../assets/home/desktop/create-and-share.jpg'
 import arrowLight from '../assets/shared/arrowLight.svg'
 import arrowDark from '../assets/shared/arrowDark.svg'
 // Imported components
-import LightInviteBtn from './helpers/LightInviteBtn'
+import InviteArrowBtn from './utilities/InviteArrowBtn'
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <section className='bg-black md:grid md:grid-cols-home-tablet md:place-items-center lg:grid-cols-home-desktop'>
         <img
           src={heroDesktop}
-          srcSet={`${heroMobile} 767w, ${heroTablet} 1439w, ${heroDesktop} 1440w`}
+          srcSet={`${heroMobile} 378w, ${heroTablet} 768w, ${heroDesktop} 1440w`}
           alt='hero image'
           className='w-full h-hero-mobile object-cover object-[50%_35%] md:h-hero-tablet md:col-start-2'
         />
@@ -30,22 +30,39 @@ export default function Home() {
             We make it easy to share photos, tell stories and connect with
             others.
           </p>
-          <LightInviteBtn />
+          <InviteArrowBtn />
         </div>
       </section>
       <section>
         {benefitCards.map((card) => (
-          <div key={card.key}>
+          <div
+            key={card.key}
+            className={
+              card.key == 1
+                ? `md:min-h-[600px] md:grid md:grid-cols-home-tablet-reverse md:place-items-center lg:grid-cols-home-desktop-reverse`
+                : `md:min-h-[600px] md:grid md:grid-cols-home-tablet md:place-items-center lg:grid-cols-home-desktop`
+            }
+          >
             <img
-              src={`src/assets/home/mobile/${card.srcMobile}`}
+              src={`src/assets/home/${card.srcDesktop}`}
               alt='section image'
-              className='w-full h-card-img'
+              className={
+                card.key == 1
+                  ? `w-full h-card-img-mobile object-cover object-center md:h-card-img-tablet`
+                  : `w-full h-card-img-mobile object-cover object-center md:h-card-img-tablet md:col-start-2`
+              }
             />
-            <div className='px-9 py-19 flex flex-col gap-6'>
-              <h2 className='text-heading uppercase text-balance'>
+            <div
+              className={
+                card.key == 1
+                  ? `px-9 py-19 flex flex-col gap-6 md:max-w-[378px] md:px-0 md:text-pretty`
+                  : `px-9 py-19 flex flex-col gap-6 md:max-w-[378px] md:px-0 md:text-pretty md:row-start-1`
+              }
+            >
+              <h2 className='text-heading-mobile uppercase text-balance md:text-heading-tablet md:text-wrap'>
                 {card.heading}
               </h2>
-              <p className='text-body'>{card.body}</p>
+              <p className='max-w-[400px] text-body'>{card.body}</p>
               <button className='mt-2 flex items-center gap-[1.125rem] text-link font-bold uppercase text-left'>
                 View the stories
                 <img src={arrowDark} alt='arrow' />
