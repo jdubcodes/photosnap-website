@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import menu from '../lib/data/menu'
 import socials from '../lib/data/socials'
 // Imported custom components
-import LightInviteBtn from './helpers/LightInviteBtn'
+import LightInviteBtn from './utilities/InviteArrowBtn'
 // Imported assests
 import logo from '../assets/shared/desktop/logo-light.svg'
 
