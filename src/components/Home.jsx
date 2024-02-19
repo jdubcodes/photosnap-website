@@ -93,12 +93,21 @@ export default function Home() {
           </div>
         ))}
       </section>
-      <section className=' px-9 py-20 flex flex-col gap-14 '>
+      <section className='px-9 py-20 flex flex-col gap-14 lg:px-0 lg:flex-row lg:gap-[1.875rem] lg:justify-center items-end'>
         {featureCards.map((card) => (
-          <div key={card.key} className='text-center'>
-            <img src={card.src} alt={card.heading} className='mx-auto mb-12' />
+          <div
+            key={card.key}
+            className='mx-auto text-center max-w-[19.375rem] md:max-w-[28.625rem] lg:max-w-[22rem] lg:mx-0 lg:flex lg:justify-center lg:items-center lg:flex-col'
+          >
+            <img
+              src={card.src}
+              alt={card.heading}
+              className='w-[72px] h-[72px] mx-auto mb-12'
+            />
             <h3 className='mb-4 text-card-heading font-bold'>{card.heading}</h3>
-            <p className='text-body'>{card.body}</p>
+            <p className='text-body lg:h-[4.75rem] lg:text-pretty'>
+              {card.body}
+            </p>
           </div>
         ))}
       </section>
