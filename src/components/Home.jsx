@@ -71,13 +71,16 @@ export default function Home() {
           </div>
         ))}
       </section>
-      <section>
+      <section className='grid md:grid-cols-2 lg:grid-cols-4'>
         {storyCards.map((card) => (
           <div
             key={card.key}
             className='h-story-img px-8 py-10 flex flex-col text-white'
             style={{
               background: `linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.66)), url(${card.srcMobile})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
             }}
           >
             <h3 className='mt-auto text-card-heading font-bold'>
