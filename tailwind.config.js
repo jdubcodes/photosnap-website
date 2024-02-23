@@ -22,9 +22,11 @@ export default {
         'home-tablet-reverse': '1.09fr 1.91fr',
         'home-desktop': '1.25fr 1.75fr',
         'home-desktop-reverse': '1.75fr 1.25fr',
+        'footer-desktop': '170px 1fr 300px',
       },
       gridTemplateRows: {
         'footer-tablet': '1rem 1fr 1.25rem',
+        'footer-desktop': '1fr 1fr',
       },
       colors: {
         grey: '#DFDFDF',
