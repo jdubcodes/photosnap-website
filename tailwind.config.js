@@ -73,6 +73,10 @@ export default {
         ],
         author: '0.813rem',
       },
+      backgroundImage: {
+        'stories-tablet':
+          'linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url("src/assets/stories/tablet/moon-of-appalacia.jpg")',
+      },
     },
   },
   plugins: [],

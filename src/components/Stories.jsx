@@ -3,41 +3,42 @@ import stories from '../lib/data/stories'
 
 // Imported assets
 import arrowLight from '../assets/shared/arrowLight.svg'
-import moon from '../assets/stories/mobile/moon-of-appalacia.jpg'
+import moonMobile from '../assets/stories/mobile/moon-of-appalacia.jpg'
+import moonTablet from '../assets/stories/mobile/moon-of-appalacia.jpg'
 
 export default function Stories() {
   return (
     <>
-      <section className='min-h-vp-mobile grid grid-row-2 bg-black text-white'>
+      <section className='min-h-vp-mobile grid grid-row-2 bg-black text-white md:min-h-0 md:h-[40.625rem] md:bg-stories-tablet md:bg-cover md:bg-center md:flex md:items-center'>
         <img
-          src={moon}
+          src={moonMobile}
           alt='mountains'
-          className='w-full h-[317px] object-cover object-top'
+          className='w-full h-[317px] object-cover object-top md:hidden'
         />
-        <div className='px-7 py-12 '>
+        <div className='px-7 py-12 md:max-w-[29rem]'>
           <p className='text-link text-bold uppercase'>
             Last month's featured story
           </p>
-          <h1 className='max-w-[300px] my-4 text-heading-mobile uppercase text-balance'>
+          <h1 className='max-w-[300px] my-4 text-heading-mobile uppercase text-balance md:text-heading-tablet'>
             Hazy Full Moon of Appalachia
           </h1>
           <p className='text-author'>
             <span className='opacity-75 mr-2'>March 2nd 2020 </span>
             <span>by John Appleseed</span>
           </p>
-          <p className='mt-6 mb-8 text-body text-white/60'>
+          <p className='mt-6 mb-8 text-body text-white/60 md:text-balance'>
             The dissected plateau area, while not actually made up of geological
             mountains, is popularly called "mountains," especially in eastern
             Kentucky and West Virginia, and while the ridges are not high, the
             terrain is extremely rugged.
           </p>
-          <button className='w-full mt-4 flex items-center justify-between text-link uppercase font-bold'>
+          <button className='w-full mt-4 flex items-center justify-between text-link uppercase font-bold md:justify-normal md:gap-4'>
             Read the story
             <img src={arrowLight} alt='arrow' />
           </button>
         </div>
       </section>
-      <section>
+      <section className='md:grid md:grid-cols-2'>
         {stories.map((story) => (
           <div
             key={story.key}
