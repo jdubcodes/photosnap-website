@@ -9,13 +9,13 @@ import moonTablet from '../assets/stories/mobile/moon-of-appalacia.jpg'
 export default function Stories() {
   return (
     <>
-      <section className='min-h-vp-mobile grid grid-row-2 bg-black text-white md:min-h-0 md:h-[40.625rem] md:bg-stories-tablet md:bg-cover md:bg-center md:flex md:items-center'>
+      <section className='min-h-vp-mobile grid grid-row-2 bg-black text-white md:min-h-0 md:h-[40.625rem] md:bg-stories-tablet md:bg-cover md:bg-center md:flex md:items-center lg:bg-stories-desktop lg:bg-top'>
         <img
           src={moonMobile}
           alt='mountains'
           className='w-full h-[317px] object-cover object-top md:hidden'
         />
-        <div className='px-7 py-12 md:max-w-[29rem]'>
+        <div className='px-7 py-12 md:pl-10 md:pr-0 md:py-0 lg:pl-40'>
           <p className='text-link text-bold uppercase'>
             Last month's featured story
           </p>
@@ -26,7 +26,7 @@ export default function Stories() {
             <span className='opacity-75 mr-2'>March 2nd 2020 </span>
             <span>by John Appleseed</span>
           </p>
-          <p className='mt-6 mb-8 text-body text-white/60 md:text-balance'>
+          <p className='mt-6 mb-8 text-body text-white/60 md:text-balance md:max-w-[24rem] lg:text-wrap'>
             The dissected plateau area, while not actually made up of geological
             mountains, is popularly called "mountains," especially in eastern
             Kentucky and West Virginia, and while the ridges are not high, the
@@ -38,7 +38,7 @@ export default function Stories() {
           </button>
         </div>
       </section>
-      <section className='md:grid md:grid-cols-2'>
+      <section className='md:grid md:grid-cols-2 lg:grid-cols-4'>
         {stories.map((story) => (
           <div
             key={story.key}

@@ -76,6 +76,8 @@ export default {
       backgroundImage: {
         'stories-tablet':
           'linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url("src/assets/stories/tablet/moon-of-appalacia.jpg")',
+        'stories-tablet':
+          'linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url("src/assets/stories/desktop/moon-of-appalacia.jpg")',
       },
     },
   },
