@@ -8,11 +8,16 @@ export default {
     },
     extend: {
       height: {
+        'vp-mobile': 'calc(100vh - 72px)',
+        'vp-tablet': '',
         'hero-mobile': '18.375rem',
         'hero-tablet': '40.625rem',
         'card-img-mobile': '17rem',
         'card-img-tablet': '37.5rem',
         'story-img': '23.438rem',
+      },
+      minHeight: {
+        'vp-mobile': 'calc(100vh - 72px)',
       },
       padding: {
         19: '4.5rem',
