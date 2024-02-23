@@ -23,6 +23,9 @@ export default {
         'home-desktop': '1.25fr 1.75fr',
         'home-desktop-reverse': '1.75fr 1.25fr',
       },
+      gridTemplateRows: {
+        'footer-tablet': '1rem 1fr 1.25rem',
+      },
       colors: {
         grey: '#DFDFDF',
       },

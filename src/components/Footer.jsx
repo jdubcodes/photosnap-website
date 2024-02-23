@@ -10,19 +10,19 @@ import logo from '../assets/shared/desktop/logo-light.svg'
 
 export default function Footer() {
   return (
-    <footer className='py-14 flex flex-col items-center bg-black'>
-      <Link to='/'>
+    <footer className='py-14 flex flex-col items-center bg-black md:px-10 md:py-16 md:grid md:grid-cols-2 md:grid-rows-footer-tablet'>
+      <Link to='/' className='row-start-1'>
         <img src={logo} alt='Logo' width={170} height={16} />
       </Link>
-      <div id='socials' className='mt-8 flex gap-3'>
+      <div id='socials' className='mt-8 flex gap-3 md:row-start-3'>
         {socials.map((social) => (
           <Link to='/' key={social.key}>
             <img src={social.src} alt={social.name} width={20} height={20} />
           </Link>
         ))}
       </div>
-      <nav>
-        <ul className='mt-12 mb-[7.5rem] flex flex-col gap-5 text-link text-white text-center font-bold uppercase'>
+      <nav className='md:row-start-2 md:col-start-1'>
+        <ul className='mt-12 mb-[7.5rem] flex flex-col gap-5 text-link text-white text-center font-bold uppercase md:mb-16 md:flex-row'>
           <li>
             <Link to='/'>Home</Link>
           </li>
@@ -34,7 +34,7 @@ export default function Footer() {
         </ul>
       </nav>
       <LightInviteBtn />
-      <p className='mt-8 text-white opacity-50'>
+      <p className='mt-8 text-white opacity-50 md:row-start-3 md:col-start-2 md:justify-self-end'>
         Copyright 2019. All Rights Reserved
       </p>
     </footer>
