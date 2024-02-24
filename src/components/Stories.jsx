@@ -3,15 +3,14 @@ import stories from '../lib/data/stories'
 
 // Imported assets
 import arrowLight from '../assets/shared/arrowLight.svg'
-import moonMobile from '../assets/stories/mobile/moon-of-appalacia.jpg'
-import moonTablet from '../assets/stories/mobile/moon-of-appalacia.jpg'
+import moonHero from '../assets/stories/desktop/moon-of-appalacia.jpg'
 
 export default function Stories() {
   return (
     <>
       <section className='min-h-vp-mobile grid grid-row-2 bg-black text-white md:min-h-0 md:h-[40.625rem] md:bg-stories-tablet md:bg-cover md:bg-center md:flex md:items-center lg:bg-stories-desktop lg:bg-top'>
         <img
-          src={moonMobile}
+          src={moonHero}
           alt='mountains'
           className='w-full h-[317px] object-cover object-top md:hidden'
         />
@@ -44,7 +43,7 @@ export default function Stories() {
             key={story.key}
             className='h-story-img px-8 py-10 flex flex-col text-white'
             style={{
-              background: `linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.66)), url(${story.srcMobile})`,
+              background: `linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.66)), url(${story.src})`,
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
               backgroundSize: 'cover',

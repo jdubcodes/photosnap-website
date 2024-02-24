@@ -77,7 +77,7 @@ export default function Home() {
             key={card.key}
             className='h-story-img px-8 py-10 flex flex-col text-white'
             style={{
-              background: `linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.66)), url(${card.srcMobile})`,
+              background: `linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.66)), url(${card.src})`,
               backgroundRepeat: 'no-repeat',
               backgroundPosition: 'center',
               backgroundSize: 'cover',
