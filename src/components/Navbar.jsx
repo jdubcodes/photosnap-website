@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <header className='w-screen h-[72px] px-6 md:px-10 lg:px-40'>
       {/* logo*/}
-      <div className='w-full h-full flex justify-between items-center'>
+      <div className='w-full h-full flex justify-between items-center lg:max-w-contain-d lg:mx-auto'>
         <Link to='/'>
           <img src={logo} alt='Logo' width={170} height={16} />
         </Link>

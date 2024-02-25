@@ -17,9 +17,8 @@ export default function Home() {
       <section className='bg-black md:grid md:grid-cols-home-tablet md:place-items-center lg:grid-cols-home-desktop'>
         <img
           src={heroDesktop}
-          srcSet={`${heroMobile} 378w, ${heroTablet} 768w, ${heroDesktop} 1440w`}
           alt='hero image'
-          className='w-full h-hero-mobile object-cover object-[50%_35%] md:h-hero-tablet md:col-start-2'
+          className='w-full h-hero-mobile object-cover object-[50%_31%] md:h-hero-tablet md:col-start-2'
         />
         <div className='px-9 py-19 flex flex-col gap-6 text-white md:row-start-1 md:max-w-[378px] md:px-0'>
           <h1 className='text-heading-mobile uppercase text-balance md:text-heading-tablet md:text-wrap'>

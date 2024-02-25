@@ -3,33 +3,33 @@ import features from '../lib/data/features'
 // Imported custom components
 import Cta from './utilities/Cta'
 // Imported assets
-import featuresHero from '../assets/features/mobile/hero.jpg'
+import featuresHero from '../assets/features/desktop/hero.jpg'
 
 export default function Features() {
   return (
     <>
-      <section className='bg-black text-white'>
+      <section className='bg-black text-white md:h-[30.625rem] md:grid md:grid-cols-home-tablet md:grid-rows-1 md:items-center lg:grid-cols-home-tablet-reverse'>
         <img
           src={featuresHero}
           alt='hero image'
-          className='w-full h-[294px] object-cover object-top md:hidden'
+          className='w-full h-[294px] object-cover object-top md:h-full md:col-start-2 md:object-[30%]'
         />
-        <div className='px-7 py-[4.5rem] flex flex-col gap-4'>
-          <h1 className='text-heading-mobile uppercase md:text-headline-tablet'>
+        <div className='px-7 py-[4.5rem] flex flex-col gap-4 md:px-10 md:col-start-1 md:row-start-1 lg:mx-auto'>
+          <h1 className='text-heading-mobile uppercase md:text-heading-tablet'>
             Features
           </h1>
-          <p className='text-body text-white/60'>
+          <p className='max-w-[24.063rem] text-body text-white/60'>
             We make sure all of our features are designed to be loved by every
             aspiring and even professional photograpers who wanted to share
             their stories.
           </p>
         </div>
       </section>
-      <section className='my-16 flex flex-col gap-14'>
+      <section className='my-16 flex flex-col gap-14 md:max-w-contain-t md:mx-auto md:px-10 md:grid md:grid-cols-2 md:gap-x-3.5 md:gap-y-[72px] lg:max-w-contain-d lg:py-20 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-[101px]'>
         {features.map((feature) => (
           <div
             key={feature.key}
-            className='mx-auto max-w-[19.375rem] text-center md:max-w-[28.625rem] lg:max-w-[22rem] lg:mx-0 lg:flex lg:justify-center lg:items-center lg:flex-col'
+            className='mx-auto max-w-[19.375rem] text-center md:max-w-[21.25rem] lg:max-w-[22rem] lg:mx-0 lg:flex lg:justify-center lg:items-center lg:flex-col'
           >
             <img
               src={feature.src}

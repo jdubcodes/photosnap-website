@@ -11,7 +11,7 @@ import logo from '../assets/shared/desktop/logo-light.svg'
 export default function Footer() {
   return (
     <footer className='w-screen bg-black'>
-      <div className='py-14 flex flex-col items-center md:max-w-[52rem] md:mx-auto md:px-10 md:grid md:grid-cols-2 md:grid-rows-footer-tablet lg:max-w-full lg:px-40 lg:grid-cols-footer-desktop lg:grid-rows-footer-desktop'>
+      <div className='py-14 flex flex-col items-center md:max-w-contain-t md:mx-auto md:px-10 md:grid md:grid-cols-2 md:grid-rows-footer-tablet lg:max-w-contain-d lg:grid-cols-footer-desktop lg:grid-rows-footer-desktop'>
         <Link to='/' className='row-start-1 lg:self-start'>
           <img src={logo} alt='Logo' width={170} height={16} />
         </Link>

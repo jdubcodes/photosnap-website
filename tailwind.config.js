@@ -7,6 +7,11 @@ export default {
       lg: '1440px', // desktop design
     },
     extend: {
+      maxWidth: {
+        'contain-m': '',
+        'contain-t': '52rem',
+        'contain-d': '70rem',
+      },
       height: {
         'vp-mobile': 'calc(100vh - 72px)',
         'vp-tablet': '',
