@@ -8,7 +8,7 @@ import featuresHero from '../assets/features/desktop/hero.jpg'
 export default function Features() {
   return (
     <>
-      <section className='bg-black text-white md:h-[30.625rem] md:grid md:grid-cols-home-tablet md:grid-rows-1 md:items-center lg:grid-cols-home-tablet-reverse'>
+      <section className='bg-black text-white md:h-[30.625rem] md:grid md:grid-cols-home-tablet md:grid-rows-1 md:items-center lg:h-hero-tablet lg:grid-cols-home-tablet-reverse'>
         <img
           src={featuresHero}
           alt='hero image'
