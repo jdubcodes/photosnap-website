@@ -1,9 +1,12 @@
 import { useState } from 'react'
 // Imported custom compoenents
 import PriceToggle from './utilities/PriceToggle'
+import PriceCard from './utilities/PriceCard'
 import Cta from './utilities/Cta'
 // Imported assets
 import pricingHero from '../assets/pricing/desktop/hero.jpg'
+// Imported custom data
+import { basic, pro, business } from '../lib/data/priceCards'
 
 export default function Pricing() {
   const [checked, setChecked] = useState(false)
@@ -32,6 +35,38 @@ export default function Pricing() {
           checked={checked}
           handleChange={() => setChecked(!checked)}
         />
+        <div className='mt-10 mb-16 px-7 flex flex-col gap-6 items-center'>
+          <PriceCard
+            heading={basic.title}
+            body={basic.body}
+            price={checked ? basic.price.yearly : basic.price.monthly}
+            time={checked ? 'year' : 'month'}
+            cardBg='grey'
+            textColor='black'
+            btnBg='black'
+            btnTextColor='white'
+          />
+          <PriceCard
+            heading={pro.title}
+            body={pro.body}
+            price={checked ? pro.price.yearly : pro.price.monthly}
+            time={checked ? 'year' : 'month'}
+            cardBg='black'
+            textColor='white'
+            btnBg='white'
+            btnTextColor='black'
+          />
+          <PriceCard
+            heading={business.title}
+            body={business.body}
+            price={checked ? business.price.yearly : business.price.monthly}
+            time={checked ? 'year' : 'month'}
+            cardBg='grey'
+            textColor='black'
+            btnBg='black'
+            btnTextColor='white'
+          />
+        </div>
       </section>
       <section></section>
       <Cta />

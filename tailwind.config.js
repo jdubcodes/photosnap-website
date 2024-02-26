@@ -77,6 +77,26 @@ export default {
           },
         ],
         author: '0.813rem',
+        'price-title': [
+          '1.5rem',
+          {
+            lineHeight: '1.563rem',
+            fontWeight: 700,
+          },
+        ],
+        'price-time': [
+          '0.938rem',
+          {
+            lineHeight: '1.563rem',
+          },
+        ],
+        'price-btn': [
+          '0.75rem',
+          {
+            letterSpacing: '3px',
+            fontWeight: 700,
+          },
+        ],
       },
       backgroundImage: {
         'stories-tablet':
