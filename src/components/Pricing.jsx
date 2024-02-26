@@ -35,7 +35,7 @@ export default function Pricing() {
           checked={checked}
           handleChange={() => setChecked(!checked)}
         />
-        <div className='mt-10 mb-16 px-7 flex flex-col gap-6 items-center'>
+        <div className='mt-10 mb-16 px-7 flex flex-col gap-6 items-center md:gap-0 lg:mt-12 lg:mb-20 lg:flex-row lg:justify-center lg:gap-[1.875rem]'>
           <PriceCard
             heading={basic.title}
             body={basic.body}
@@ -55,6 +55,7 @@ export default function Pricing() {
             textColor='white'
             btnBg='white'
             btnTextColor='black'
+            height='price-card'
           />
           <PriceCard
             heading={business.title}

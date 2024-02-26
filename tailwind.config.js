@@ -20,6 +20,7 @@ export default {
         'card-img-mobile': '17rem',
         'card-img-tablet': '37.5rem',
         'story-img': '23.438rem',
+        'price-card': '29.375rem',
       },
       minHeight: {
         'vp-mobile': 'calc(100vh - 72px)',
