@@ -1,9 +1,13 @@
+import { useState } from 'react'
 // Imported custom compoenents
+import PriceToggle from './utilities/PriceToggle'
 import Cta from './utilities/Cta'
 // Imported assets
 import pricingHero from '../assets/pricing/desktop/hero.jpg'
 
 export default function Pricing() {
+  const [checked, setChecked] = useState(false)
+
   return (
     <>
       <section className='bg-black text-white md:h-[30.625rem] md:grid md:grid-cols-home-tablet md:grid-rows-1 md:items-center lg:h-hero-tablet lg:grid-cols-home-tablet-reverse'>
@@ -23,7 +27,12 @@ export default function Pricing() {
           </p>
         </div>
       </section>
-      <section></section>
+      <section>
+        <PriceToggle
+          checked={checked}
+          handleChange={() => setChecked(!checked)}
+        />
+      </section>
       <section></section>
       <Cta />
     </>
