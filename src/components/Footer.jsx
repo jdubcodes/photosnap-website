@@ -39,7 +39,7 @@ export default function Footer() {
         </nav>
         <LightInviteBtn />
         <p className='mt-8 text-white opacity-50 md:row-start-3 md:col-start-2 md:justify-self-end lg:col-start-3 lg:row-start-2 lg:self-end'>
-          Copyright 2019. All Rights Reserved
+          Copyright 2024. All Rights Reserved
         </p>
       </div>
     </footer>
