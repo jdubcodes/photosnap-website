@@ -7,6 +7,7 @@ import Cta from './utilities/Cta'
 import pricingHero from '../assets/pricing/desktop/hero.jpg'
 // Imported custom data
 import { basic, pro, business } from '../lib/data/priceCards'
+import PricingFeatures from './utilities/PricingFeatures'
 
 export default function Pricing() {
   const [checked, setChecked] = useState(false)
@@ -30,12 +31,12 @@ export default function Pricing() {
           </p>
         </div>
       </section>
-      <section>
+      <section className='mb-16 md:mb-28 lg:mb-40'>
         <PriceToggle
           checked={checked}
           handleChange={() => setChecked(!checked)}
         />
-        <div className='mt-10 mb-16 px-7 flex flex-col gap-6 items-center md:gap-0 lg:mt-12 lg:mb-20 lg:flex-row lg:justify-center lg:gap-[1.875rem]'>
+        <div className='mt-10 px-7 flex flex-col gap-6 items-center md:gap-0 lg:mt-12 lg:flex-row lg:justify-center lg:gap-[1.875rem]'>
           <PriceCard
             heading={basic.title}
             body={basic.body}
@@ -69,7 +70,12 @@ export default function Pricing() {
           />
         </div>
       </section>
-      <section></section>
+      <section className=''>
+        <h3 className='hidden text-black text-heading-tablet text-center uppercase md:block md:mb-16'>
+          Compare
+        </h3>
+        <PricingFeatures />
+      </section>
       <Cta />
     </>
   )
