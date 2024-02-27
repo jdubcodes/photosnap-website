@@ -98,6 +98,13 @@ export default {
             fontWeight: 700,
           },
         ],
+        'package-name': [
+          '0.625rem',
+          {
+            letterSpacing: '0.104rem',
+            fontWeight: 700,
+          },
+        ],
       },
       backgroundImage: {
         'stories-tablet':
