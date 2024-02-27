@@ -11,7 +11,11 @@ export default function PriceCard({
 }) {
   return (
     <div
-      className={`max-w-[20rem] pt-14 px-6 pb-10 bg-${cardBg} flex flex-col gap-10 justify-center text-center md:max-w-full md:w-[43.063rem] md:pt-10 md:px-10 md:text-left md:relative lg:w-[21.875rem] lg:h-${height} lg:pt-14 lg:flex lg:items-center lg:text-center`}
+      className={
+        height
+          ? `max-w-[20rem] pt-14 px-6 pb-10 bg-${cardBg} flex flex-col gap-10 justify-center text-center md:max-w-full md:w-[43.063rem] md:pt-10 md:px-10 md:text-left md:relative lg:w-[21.875rem] lg:h-price-card lg:pt-14 lg:flex lg:items-center lg:text-center`
+          : `max-w-[20rem] pt-14 px-6 pb-10 bg-${cardBg} flex flex-col gap-10 justify-center text-center md:max-w-full md:w-[43.063rem] md:pt-10 md:px-10 md:text-left md:relative lg:w-[21.875rem] lg:pt-14 lg:flex lg:items-center lg:text-center`
+      }
     >
       <div className={`text-${textColor}`}>
         <h5 className='mb-6 text-price-title'>{heading}</h5>
