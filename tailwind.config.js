@@ -108,6 +108,10 @@ export default {
         'stories-tablet':
           'linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url("src/assets/stories/moon-of-appalacia.jpg")',
         cta: 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("src/assets/shared/bg-beta.jpg")',
+        'accent-mobile':
+          'linear-gradient(1deg, rgba(255,197,147,1) 6%, rgba(188,113,152,1) 49%, rgba(90,119,255,1) 94%)',
+        'accent-tablet':
+          'linear-gradient(82deg, rgba(255,197,147,1) 0%, rgba(188,113,152,1) 53%, rgba(90,119,255,1) 85%)',
       },
     },
   },

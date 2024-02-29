@@ -18,7 +18,8 @@ export default function Home() {
           alt='hero image'
           className='w-full h-hero-mobile object-cover object-[50%_31%] md:h-hero-tablet md:col-start-2'
         />
-        <div className='px-9 py-19 flex flex-col gap-6 text-white md:row-start-1 md:max-w-[378px] md:px-0'>
+        <div className='px-9 py-19 relative flex flex-col gap-6 text-white md:row-start-1 md:max-w-[378px] md:px-0 md:static'>
+          <span className='w-[128px] h-[6px] bg-accent-mobile absolute top-0 md:w-[302px] md:top-[396px] md:-left-[148px] md:rotate-[-90deg] md:bg-accent-tablet'></span>
           <h1 className='text-heading-mobile uppercase text-balance md:text-heading-tablet md:text-wrap'>
             Create and share your photo stories.
           </h1>
