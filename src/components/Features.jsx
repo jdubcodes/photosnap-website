@@ -12,7 +12,7 @@ export default function Features() {
         <img
           src={featuresHero}
           alt='hero image'
-          className='w-full h-[294px] object-cover object-top md:h-full md:col-start-2 md:object-[30%]'
+          className='w-full h-[294px] object-cover object-top md:h-full md:col-start-2 md:object-[30%] lg:object-[30%_15%]'
         />
         <div className='px-7 py-[4.5rem] flex flex-col gap-4 md:px-10 md:col-start-1 md:row-start-1 lg:mx-auto'>
           <h1 className='text-heading-mobile uppercase md:text-heading-tablet'>

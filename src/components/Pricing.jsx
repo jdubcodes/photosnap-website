@@ -18,7 +18,7 @@ export default function Pricing() {
         <img
           src={pricingHero}
           alt='hero image'
-          className='w-full h-[294px] object-cover object-top md:h-full md:col-start-2 md:object-[55%]'
+          className='w-full h-[294px] object-cover object-top md:h-full md:col-start-2 md:object-[52%] lg:object-[52%_5%]'
         />
         <div className='px-7 py-[4.5rem] flex flex-col gap-4 md:px-10 md:col-start-1 md:row-start-1 lg:mx-auto'>
           <h1 className='text-heading-mobile uppercase md:text-heading-tablet'>

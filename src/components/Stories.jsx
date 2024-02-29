@@ -45,7 +45,7 @@ export default function Stories() {
             style={{
               background: `linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.66)), url(${story.src})`,
               backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
+              backgroundPosition: '50% 40%',
               backgroundSize: 'cover',
             }}
           >
