@@ -12,20 +12,20 @@ export default function Stories() {
         <img
           src={moonHero}
           alt='mountains'
-          className='w-full h-[317px] object-cover object-top md:hidden'
+          className='w-full h-[19.813rem] object-cover object-top md:hidden'
         />
-        <div className='px-7 py-12 md:pl-10 md:pr-0 md:py-0 lg:pl-40'>
+        <div className='w-[27.25rem] px-7 py-12 md:ml-10 md:pr-0 md:py-0 lg:px-0 lg:ml-40'>
           <p className='text-link text-bold uppercase'>
             Last month's featured story
           </p>
-          <h1 className='max-w-[300px] my-4 text-heading-mobile uppercase text-balance md:text-heading-tablet'>
+          <h1 className='max-w-[18.75rem] my-4 text-heading-mobile uppercase text-balance md:text-heading-tablet'>
             Hazy Full Moon of Appalachia
           </h1>
           <p className='text-author'>
             <span className='opacity-75 mr-2'>March 2nd 2020 </span>
             <span>by John Appleseed</span>
           </p>
-          <p className='mt-6 mb-8 text-body text-white/60 md:text-balance md:max-w-[24rem] lg:text-wrap'>
+          <p className='mt-6 mb-8 text-body text-white/60 md:text-balance'>
             The dissected plateau area, while not actually made up of geological
             mountains, is popularly called "mountains," especially in eastern
             Kentucky and West Virginia, and while the ridges are not high, the
