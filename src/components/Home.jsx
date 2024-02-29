@@ -3,9 +3,7 @@ import benefitCards from '../lib/data/benefitCards'
 import storyCards from '../lib/data/storyCards'
 import featureCards from '../lib/data/featureCards'
 // Imported assets
-import heroMobile from '../assets/home/mobile/create-and-share.jpg'
-import heroTablet from '../assets/home/tablet/create-and-share.jpg'
-import heroDesktop from '../assets/home/desktop/create-and-share.jpg'
+import hero from '../assets/home/desktop/create-and-share.jpg'
 import arrowLight from '../assets/shared/arrowLight.svg'
 import arrowDark from '../assets/shared/arrowDark.svg'
 // Imported components
@@ -16,7 +14,7 @@ export default function Home() {
     <main>
       <section className='bg-black md:grid md:grid-cols-home-tablet md:place-items-center lg:grid-cols-home-desktop'>
         <img
-          src={heroDesktop}
+          src={hero}
           alt='hero image'
           className='w-full h-hero-mobile object-cover object-[50%_31%] md:h-hero-tablet md:col-start-2'
         />
@@ -47,8 +45,8 @@ export default function Home() {
               alt='section image'
               className={
                 card.key == 1
-                  ? `w-full h-card-img-mobile object-cover object-center md:h-card-img-tablet`
-                  : `w-full h-card-img-mobile object-cover object-center md:h-card-img-tablet md:col-start-2`
+                  ? `w-full h-card-img-mobile object-cover object-center md:h-card-img-tablet md:object-[15%]`
+                  : `w-full h-card-img-mobile object-cover object-[50%_10%] md:h-card-img-tablet md:col-start-2`
               }
             />
             <div
@@ -78,7 +76,7 @@ export default function Home() {
             style={{
               background: `linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.66)), url(${card.src})`,
               backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
+              backgroundPosition: '50% 35%',
               backgroundSize: 'cover',
             }}
           >
