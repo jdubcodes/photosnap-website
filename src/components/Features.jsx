@@ -3,7 +3,7 @@ import features from '../lib/data/features'
 // Imported custom components
 import Cta from './utilities/Cta'
 // Imported assets
-import featuresHero from '../assets/features/desktop/hero.jpg'
+import featuresHero from '../assets/features/hero.jpg'
 
 export default function Features() {
   return (

@@ -4,7 +4,7 @@ import PriceToggle from './utilities/PriceToggle'
 import PriceCard from './utilities/PriceCard'
 import Cta from './utilities/Cta'
 // Imported assets
-import pricingHero from '../assets/pricing/desktop/hero.jpg'
+import pricingHero from '../assets/pricing/hero.jpg'
 // Imported custom data
 import { basic, pro, business } from '../lib/data/priceCards'
 import PricingFeatures from './utilities/PricingFeatures'
@@ -70,7 +70,7 @@ export default function Pricing() {
           />
         </div>
       </section>
-      <section className=''>
+      <section>
         <h3 className='hidden text-black text-heading-tablet text-center uppercase md:block md:mb-16'>
           Compare
         </h3>

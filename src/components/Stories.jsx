@@ -3,18 +3,18 @@ import stories from '../lib/data/stories'
 
 // Imported assets
 import arrowLight from '../assets/shared/arrowLight.svg'
-import moonHero from '../assets/stories/desktop/moon-of-appalacia.jpg'
+import moonHero from '../assets/stories/moon-of-appalacia.jpg'
 
 export default function Stories() {
   return (
     <>
-      <section className='min-h-vp-mobile grid grid-row-2 bg-black text-white md:min-h-0 md:h-[40.625rem] md:bg-stories-tablet md:bg-cover md:bg-center md:flex md:items-center lg:bg-stories-desktop lg:bg-top'>
+      <section className='min-h-vp-mobile grid grid-row-2 bg-black text-white md:min-h-0 md:h-[40.625rem] md:bg-stories-tablet md:bg-cover md:bg-[60%_0%] md:flex md:items-center lg:bg-stories-desktop lg:bg-top'>
         <img
           src={moonHero}
           alt='mountains'
           className='w-full h-[19.813rem] object-cover object-top md:hidden'
         />
-        <div className='w-[27.25rem] px-7 py-12 md:ml-10 md:pr-0 md:py-0 lg:px-0 lg:ml-40'>
+        <div className='max-w-[27.25rem] px-7 py-12 md:ml-10 md:pr-0 md:py-0 lg:px-0 lg:ml-40'>
           <p className='text-link text-bold uppercase'>
             Last month's featured story
           </p>

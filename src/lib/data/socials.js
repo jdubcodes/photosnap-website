@@ -2,27 +2,27 @@ const socials = [
   {
     key: '1',
     name: 'facebook',
-    src: 'src/assets/shared/desktop/facebook.svg',
+    src: 'src/assets/shared/facebook.svg',
   },
   {
     key: '2',
     name: 'youtube',
-    src: 'src/assets/shared/desktop/youtube.svg',
+    src: 'src/assets/shared/youtube.svg',
   },
   {
     key: '3',
     name: 'twitter',
-    src: 'src/assets/shared/desktop/twitter.svg',
+    src: 'src/assets/shared/twitter.svg',
   },
   {
     key: '4',
     name: 'pinterest',
-    src: 'src/assets/shared/desktop/pinterest.svg',
+    src: 'src/assets/shared/pinterest.svg',
   },
   {
     key: '5',
     name: 'instagram',
-    src: 'src/assets/shared/desktop/instagram.svg',
+    src: 'src/assets/shared/instagram.svg',
   },
 ]
 

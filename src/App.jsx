@@ -1,5 +1,5 @@
 // React imports
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 // Component imports
 import Navbar from './components/Navbar'

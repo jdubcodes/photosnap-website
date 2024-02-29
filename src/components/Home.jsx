@@ -3,7 +3,7 @@ import benefitCards from '../lib/data/benefitCards'
 import storyCards from '../lib/data/storyCards'
 import featureCards from '../lib/data/featureCards'
 // Imported assets
-import hero from '../assets/home/desktop/create-and-share.jpg'
+import hero from '../assets/home/create-and-share.jpg'
 import arrowLight from '../assets/shared/arrowLight.svg'
 import arrowDark from '../assets/shared/arrowDark.svg'
 // Imported components
@@ -41,7 +41,7 @@ export default function Home() {
             }
           >
             <img
-              src={`src/assets/home/${card.srcDesktop}`}
+              src={`src/assets/home/${card.src}`}
               alt='section image'
               className={
                 card.key == 1

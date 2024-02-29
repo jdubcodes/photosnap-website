@@ -8,13 +8,11 @@ export default {
     },
     extend: {
       maxWidth: {
-        'contain-m': '',
         'contain-t': '52rem',
         'contain-d': '70rem',
       },
       height: {
         'vp-mobile': 'calc(100vh - 72px)',
-        'vp-tablet': '',
         'hero-mobile': '18.375rem',
         'hero-tablet': '40.625rem',
         'card-img-mobile': '17rem',
@@ -108,11 +106,8 @@ export default {
       },
       backgroundImage: {
         'stories-tablet':
-          'linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url("src/assets/stories/tablet/moon-of-appalacia.jpg")',
-        'stories-tablet':
-          'linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url("src/assets/stories/desktop/moon-of-appalacia.jpg")',
-        'cta-mobile':
-          'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("src/assets/shared/mobile/bg-beta.jpg")',
+          'linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url("src/assets/stories/moon-of-appalacia.jpg")',
+        cta: 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("src/assets/shared/bg-beta.jpg")',
       },
     },
   },

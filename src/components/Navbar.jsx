@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { gsap } from '../lib/config/gsapConfig.jsx'
 import { useGSAP } from '@gsap/react'
 // Imported assests
-import logo from '../assets/shared/desktop/logo.svg'
+import logo from '../assets/shared/logo.svg'
 import open from '../assets/shared/mobile/menu.svg'
 import close from '../assets/shared/mobile/close.svg'
 // Imported custom data
@@ -20,7 +20,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className='w-screen h-[72px] px-6 md:px-10 lg:px-40'>
+    <header className='h-[72px] px-6 md:px-10 lg:px-40'>
       {/* logo*/}
       <div className='w-full h-full flex justify-between items-center lg:max-w-contain-d lg:mx-auto'>
         <Link to='/'>
