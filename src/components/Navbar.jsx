@@ -30,14 +30,17 @@ export default function Navbar() {
         <nav>
           <ul className='hidden md:flex gap-9 font-bold text-link uppercase'>
             {menu.map((item) => (
-              <li key={item.key}>
+              <li
+                key={item.key}
+                className='transition-all ease-in-out duration-300 hover:opacity-30'
+              >
                 <Link to={item.src}>{item.name}</Link>
               </li>
             ))}
           </ul>
         </nav>
         {/* desktop CTA button */}
-        <button className='hidden w-[9.875rem] h-10 bg-black text-white md:flex justify-center items-center text-link uppercase'>
+        <button className='hidden w-[9.875rem] h-10 bg-black text-white md:flex justify-center items-center text-link uppercase transition-all ease-in-out duration-500 hover:bg-grey hover:text-black'>
           Get an invite
         </button>
         {/* mobile menu button */}

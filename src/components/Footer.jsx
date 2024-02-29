@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import menu from '../lib/data/menu'
 import socials from '../lib/data/socials'
 // Imported custom components
-import LightInviteBtn from './utilities/InviteArrowBtn'
+import InviteArrowBtn from './utilities/InviteArrowBtn'
 // Imported assests
 import logo from '../assets/shared/logo-light.svg'
 
@@ -21,23 +21,32 @@ export default function Footer() {
         >
           {socials.map((social) => (
             <Link to='/' key={social.key}>
-              <img src={social.src} alt={social.name} width={20} height={20} />
+              <img
+                src={social.src}
+                alt={social.name}
+                width={20}
+                height={20}
+                className='hover:scale-[1.2] duration-300 ease-in-out transition-all'
+              />
             </Link>
           ))}
         </div>
         <nav className='md:row-start-2 md:col-start-1 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:justify-self-start'>
           <ul className='mt-12 mb-[7.5rem] flex flex-col gap-5 text-link text-white text-center font-bold uppercase md:mb-16 md:flex-row lg:my-0 lg:ml-[6.875rem] lg:flex-col'>
-            <li>
+            <li className='transition-all ease-in-out duration-300 hover:opacity-30'>
               <Link to='/'>Home</Link>
             </li>
             {menu.map((item) => (
-              <li key={item.key}>
+              <li
+                key={item.key}
+                className='transition-all ease-in-out duration-300 hover:opacity-30'
+              >
                 <Link to={item.src}>{item.name}</Link>
               </li>
             ))}
           </ul>
         </nav>
-        <LightInviteBtn />
+        <InviteArrowBtn justify='end' />
         <p className='mt-8 text-white opacity-50 md:row-start-3 md:col-start-2 md:justify-self-end lg:col-start-3 lg:row-start-2 lg:self-end'>
           Copyright 2024. All Rights Reserved
         </p>
