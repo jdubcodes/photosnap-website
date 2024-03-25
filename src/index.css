@@ -18,4 +18,8 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  .menu-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
 }
