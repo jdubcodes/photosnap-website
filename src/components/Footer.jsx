@@ -34,14 +34,18 @@ export default function Footer() {
         <nav className='md:row-start-2 md:col-start-1 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:justify-self-start'>
           <ul className='mt-12 mb-[7.5rem] flex flex-col gap-5 text-link text-white text-center font-bold uppercase md:mb-16 md:flex-row lg:my-0 lg:ml-[6.875rem] lg:flex-col'>
             <li className='transition-all ease-in-out duration-300 hover:opacity-30'>
-              <Link to='/'>Home</Link>
+              <Link to='/' onClick={() => window.scrollTo(0, 0)}>
+                Home
+              </Link>
             </li>
             {menu.map((item) => (
               <li
                 key={item.key}
                 className='transition-all ease-in-out duration-300 hover:opacity-30'
               >
-                <Link to={item.src}>{item.name}</Link>
+                <Link to={item.src} onClick={() => window.scrollTo(0, 0)}>
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>

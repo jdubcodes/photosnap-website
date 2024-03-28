@@ -37,9 +37,11 @@ export default function Navbar() {
   )
 
   const logoClick = () => {
-    tl.current.reversed(!tl.current.reversed())
-    setIsOpen(false)
-    window.scrollTo(0, 0)
+    if (isOpen) {
+      tl.current.reversed(!tl.current.reversed())
+      setIsOpen(false)
+      window.scrollTo(0, 0)
+    }
   }
 
   const handleClick = () => {
@@ -53,6 +55,7 @@ export default function Navbar() {
     } else {
       document.body.style.overflow = 'unset'
     }
+    console.log(isOpen)
   }, [isOpen])
 
   return (
@@ -80,7 +83,7 @@ export default function Navbar() {
           Get an invite
         </button>
         {/* mobile menu button */}
-        <button onClick={handleClick} className='md:hidden'>
+        <button className='md:hidden' onClick={handleClick}>
           {isOpen ? (
             <img src={close} alt='menu button' width={20} height={6} />
           ) : (
@@ -91,7 +94,7 @@ export default function Navbar() {
       {/* mobile dropdown menu */}
       <div
         ref={navRef}
-        className={`w-100vw h-screen fixed top-0 left-0 bg-black/70 translate-y-[71px] z-10 hidden opacity-0`}
+        className={`w-screen h-screen fixed top-0 left-0 bg-black/70 translate-y-[71px] z-10 opacity-0 hidden`}
         onClick={handleClick}
       >
         <nav
@@ -101,9 +104,7 @@ export default function Navbar() {
           <ul className='flex flex-col gap-5 pb-5 border-b border-black/25 mx-8'>
             {menu.map((item) => (
               <li key={item.key}>
-                <Link to={item.src} onClick={handleClick}>
-                  {item.name}
-                </Link>
+                <Link to={item.src}>{item.name}</Link>
               </li>
             ))}
           </ul>
