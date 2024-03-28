@@ -49,28 +49,29 @@ export default function Stories() {
       </section>
       <section className='md:grid md:grid-cols-2 lg:grid-cols-4 overflow-hidden'>
         {stories.map((story) => (
-          <div
-            key={story.key}
-            className='h-story-img px-8 py-10 flex flex-col text-white relative transform-all duration-300 ease-in-out cursor-pointer group hover:-translate-y-[6px]'
-            style={{
-              background: `linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.66)), url(${story.src})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: '50% 40%',
-              backgroundSize: 'cover',
-            }}
-          >
-            <p className='mt-auto text-author'>{story.date}</p>
-            <h3 className='my-1 text-card-heading font-bold'>
-              {story.heading}
-            </h3>
-            <p className='pb-4 border-b border-grey/25 text-author'>
-              by {story.author}
-            </p>
-            <button className='w-full mt-4 flex items-center justify-between text-link uppercase font-bold'>
-              Read story
-              <img src={arrowLight} alt='arrow' />
-            </button>
-            <span className='w-full h-[6px] absolute bottom-0 -translate-x-8 translate-y-[6px] bg-accent-tablet'></span>
+          <div key={story.key} className='overflow-hidden'>
+            <div
+              className='h-story-img px-8 py-10 flex flex-col text-white relative transform-all duration-[400ms] ease-in-out cursor-pointer group lg:hover:-translate-y-[12px]'
+              style={{
+                background: `linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.66)), url(${story.src})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: '50% 40%',
+                backgroundSize: 'cover',
+              }}
+            >
+              <p className='mt-auto text-author'>{story.date}</p>
+              <h3 className='my-1 text-card-heading font-bold'>
+                {story.heading}
+              </h3>
+              <p className='pb-4 border-b border-grey/25 text-author'>
+                by {story.author}
+              </p>
+              <button className='w-full mt-4 flex items-center justify-between text-link uppercase font-bold'>
+                Read story
+                <img src={arrowLight} alt='arrow' />
+              </button>
+              <span className='w-full h-[12px] absolute bottom-0 -translate-x-8 translate-y-[12px] bg-accent-tablet'></span>
+            </div>
           </div>
         ))}
       </section>
