@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 // Imported custom ddta
 import benefitCards from '../lib/data/benefitCards'
 import storyCards from '../lib/data/storyCards'
@@ -8,11 +9,30 @@ import arrowLight from '../assets/shared/arrowLight.svg'
 import arrowDark from '../assets/shared/arrowDark.svg'
 // Imported components
 import InviteArrowBtn from './utilities/InviteArrowBtn'
+// Imported GSAP utilities
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
+  const tl = useRef()
+
+  useGSAP(() => {
+    gsap.utils.toArray('.panel').forEach((panel) => {
+      ScrollTrigger.create({
+        trigger: panel,
+        start: 'top top',
+        pin: true,
+        pinSpacing: false,
+      })
+    })
+  })
+
   return (
     <main>
-      <section className='bg-black md:grid md:grid-cols-home-tablet md:place-items-center lg:grid-cols-home-desktop'>
+      <section className='bg-black md:grid md:grid-cols-home-tablet overflow-x-hidden md:place-items-center lg:grid-cols-home-desktop panel'>
         <img
           src={hero}
           alt='hero image'
@@ -35,11 +55,11 @@ export default function Home() {
         {benefitCards.map((card) => (
           <div
             key={card.key}
-            className={
+            className={`bg-white md:min-h-[600px] md:grid md:place-items-center lg:grid-cols-home-desktop-reverse panel ${
               card.key == 1
-                ? `md:min-h-[600px] md:grid md:grid-cols-home-tablet-reverse md:place-items-center lg:grid-cols-home-desktop-reverse`
-                : `md:min-h-[600px] md:grid md:grid-cols-home-tablet md:place-items-center lg:grid-cols-home-desktop`
-            }
+                ? `md:grid-cols-home-tablet-reverse`
+                : `md:grid-cols-home-tablet`
+            }`}
           >
             <img
               src={`src/assets/home/${card.src}`}
@@ -79,7 +99,7 @@ export default function Home() {
           </div>
         ))}
       </section>
-      <section className='grid overflow-hidden md:grid-cols-2 lg:grid-cols-4'>
+      <section className='grid overflow-hidden relative bg-white md:grid-cols-2 lg:grid-cols-4'>
         {storyCards.map((card) => (
           <div
             key={card.key}
@@ -105,7 +125,7 @@ export default function Home() {
           </div>
         ))}
       </section>
-      <section className='px-9 py-20 flex flex-col gap-14 lg:px-0 lg:flex-row lg:gap-[1.875rem] lg:justify-center items-end'>
+      <section className='px-9 py-20 flex flex-col gap-14 bg-white lg:px-0 lg:flex-row lg:gap-[1.875rem] lg:justify-center items-end panel'>
         {featureCards.map((card) => (
           <div
             key={card.key}
